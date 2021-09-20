@@ -1,0 +1,20 @@
+train_set: voc
+class_num: 20
+train_classifier: False
+pre_ckpt: mobilenet_v1_0.25_224/mobilenet_v1_0.25_224.ckpt
+model_def: mobile_yolo
+augmenter: False
+anchor_file: data/voc_anchors.list
+image_size: [240, 320]
+output_size: [7, 10]
+batch_size: 32
+rand_seed: 3
+max_nrof_epochs: 20
+init_learning_rate: 0.0005
+learning_rate_decay_epochs: 10
+learning_rate_decay_factor: 1.0
+obj_weight: 5.0
+noobj_weight: 0.5
+obj_thresh: 0.75
+iou_thresh: 0.5
+log_dir: log
